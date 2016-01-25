@@ -1,6 +1,6 @@
 # Dockerize Demo - Wait for containers
 
-Simple Docker Compose setup: front-end API service that takes 5 seconds to start up, and a [test](test/muxy_test.go) harness that hits the API 100 times, failing if it receives any non-20x response codes.
+Simple Docker Compose setup: front-end [API](https://github.com/mefellows/dockerize-compose-demo/blob/master/main.go) that takes 5 seconds to start up, and a [test](https://github.com/mefellows/dockerize-compose-demo/blob/master/test/web_test.go) harness that hits the API 100 times, failing if it receives any non-20x response codes.
 
 ## Running
 
