@@ -11,22 +11,15 @@ git co fail
 docker-compose up
 ```
 
-The test should fail, along the following lines:
+The test should fail with something like:
 
-> 	web_test.go:46: Error not expected: Get http://api/: dial tcp 172.17.0.3:80: getsockopt: connection refused
+> test_1 | 	web_test.go:46: Error not expected: Get http://api/: dial tcp 172.17.0.3:80: getsockopt: connection refused
 
->  FAIL
-
->  exit status 1
-
->  FAIL	_/app	0.031s
-
->  Docker: an error occurred. Exiting...
-
+This is because Compose knows the container has started, but not the service within it.
 
 ### Passing Example
 
-Using [Dockerize](), we can ensure the tests don't run until the dependent API is up and running:
+Using [Dockerize](https://github.com/jwilder/dockerize), we can ensure the tests don't run until the dependent API is up and running:
 
 ```
 git co dockerize
