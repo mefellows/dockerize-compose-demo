@@ -7,6 +7,6 @@ api:
 
 test:
   build: test
-  command: go test -v ./...
+  command: dockerize -wait http://api:80 go test -v ./...
   links:
     - api:api
