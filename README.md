@@ -14,10 +14,14 @@ docker-compose up
 The test should fail, along the following lines:
 
 > 	web_test.go:46: Error not expected: Get http://api/: dial tcp 172.17.0.3:80: getsockopt: connection refused
-> FAIL
-> exit status 1
-> FAIL	_/app	0.031s
-> Docker: an error occurred. Exiting...
+
+>  FAIL
+
+>  exit status 1
+
+>  FAIL	_/app	0.031s
+
+>  Docker: an error occurred. Exiting...
 
 
 ### Passing Example
