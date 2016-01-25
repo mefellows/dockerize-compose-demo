@@ -1,0 +1,12 @@
+api:
+  build: .
+  ports:
+   - "8000:80"
+  expose:
+  - "80"
+
+test:
+  build: test
+  command: go test -v ./...
+  links:
+    - api:api
